@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            function setName() {
+                let name = prompt("What is your name?");
+                let tN1 = document.getElementById("tempName1");
+                let tN2 = document.getElementById("tempName2");
+                tN1.innerText = name;
+                tN2.innerHTML = name;
+            }
+        </script>
+        <style type="text/css">
+            .name {
+                color: red;
+            }
+            .box {
+                /*
+                width:500px;
+                height:100px;
+                */
+                background-color: rgb(216, 179, 250);
+                text-align: center;
+                width: 100px;
+                border:1px solid rgb(255, 0, 0);
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            JavaScript is cool, says <span id="tempName1" class="name">Sanje</span>
+        </p>
+        <hr>
+        <p>
+            JavaScript is cool, says <div class="box"><span id="tempName2">Sanje</span></div>
+        </p>
+        <script>
+            setName();
+        </script>
+    </body>
+</html>

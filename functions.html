@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function showMessage() {
+                let userName = "Sanje";
+                
+                let message = 'Hello, ' + userName;
+                //alert(message)
+                document.write(message);
+                let welcomemessage = document.getElementById('welcome');
+                welcomemessage.innerText = message;
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Function Example:</h1>
+        <h3 id = 'welcome'>Hello</h3>
+        <script>
+            showMessage();
+        </script>
+    </body>
+</html>

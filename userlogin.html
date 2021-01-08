@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            .box {
+                border:1px solid black;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                width: 200px;
+            }
+        </style>
+
+        <script>
+            function hideForm() {
+                let login = document.getElementById("loginName").value;
+                let welcome = document.getElementById("welcome");
+                welcome.innerText = "Welcome, " + login;
+                let loginform = document.getElementById("loginform");
+                loginform.style.display = "none";
+                let linkinfo = document.getElementById("link");
+                link.style.display = "block";
+            }
+            function showForm() {
+                document.getElementById("loginPass").value = "";
+                let welcome = document.getElementById("welcome");
+                welcome.innerText = "";
+                let loginform = document.getElementById("loginform");
+                loginform.style.display = "block";
+                let linkinfo = document.getElementById("link");
+                link.style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <span id="welcome"></span>
+        <a onClick="showForm()" style="display: none;" id="link">click to show the form</a>
+        <div id="loginform" class="box">
+            <div style="text-align: center;">
+                <span>User Login</span><br>
+            </div>
+            <span>Name: </span> <input id="loginName" type="text"> <br>
+            <span>Pass: </span> <input id="loginPass" type="password"> <br>
+            <button onClick="hideForm();" id="login">Login</button>
+        </div>
+
+    </body>
+</html>

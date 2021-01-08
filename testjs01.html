@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <p>Before the script...</p>
+        <script>
+            //alert("TEST");
+            document.write('Hello, <b>world!</b><br>');
+            document.write(new Date().toLocaleString() + "<br>");
+            document.write("Today is " + new Date().getDay());
+
+            result = prompt("Type your name");
+            document.write(`<br>Hello, <b>${result}!</b><br>`);
+
+            if (new Date().getDay() == 6){
+                document.bgColor = "yellow";
+            }
+            else {
+                document.bgColor = "white";
+            }
+        </script>
+        <p>...After the script.</p>
+    </body>
+</html>
