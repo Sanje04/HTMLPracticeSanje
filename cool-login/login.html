@@ -1,0 +1,88 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+   <!--Made with love by Mutiullah Samim -->
+   
+	<!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href=".\styles\bootstrap-4.5.3-dist\css\bootstrap.min.css" id="bootstrap-css">
+    <script src=".\styles\bootstrap-4.5.3-dist\js\bootstrap.min.js"></script>
+    
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+	<!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <!--
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    -->
+    <script>
+        function hideForm() {
+            let login = document.getElementById("loginName").value;
+            let welcome = document.getElementById("welcome");
+            welcome.innerText = "Welcome, " + login;
+            let loginform = document.getElementById("loginform");
+            loginform.style.display = "none";
+            let linkinfo = document.getElementById("link");
+            link.style.display = "block";
+        }
+        function showForm() {
+            document.getElementById("loginPass").value = "";
+            let rememberme = document.getElementById("cbremember");
+            if (rememberme.checked == false) {
+                document.getElementById("loginName").value = "";
+            } 
+            let welcome = document.getElementById("welcome");
+            welcome.innerText = "";
+            let loginform = document.getElementById("loginform");
+            loginform.style.display = "block";
+            let linkinfo = document.getElementById("link");
+            link.style.display = "none";
+        }
+    </script>
+
+</head>
+<body>
+    <span id="welcome"></span>
+        <a onClick="showForm()" style="display: none;" id="link">click to show the form</a>
+<div class="container" id="loginform">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+				<div class="d-flex justify-content-end social_icon">
+				</div>
+			</div>
+			<div class="card-body">
+				<form>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="username" input id="loginName">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" placeholder="password" input id="loginPass">
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox" id="cbremember">Remember Me
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-right login_btn" onClick="hideForm();" id="login">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
